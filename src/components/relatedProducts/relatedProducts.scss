@@ -1,0 +1,61 @@
+.related-projects{
+    width: 90vw;
+    margin: 80px auto;
+    .heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            margin: 0;
+            padding: 0;
+            span{
+                font-size: 16px;
+            }
+        }
+        button{
+            font-size: 16px;
+            padding: 5px 15px;
+            background-color: transparent;
+            border: 1px solid grey;
+            color: grey;
+            border-radius: 5px;
+        }
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        margin-top: -40px;
+    }
+}
+
+
+@media screen and (max-width:780px) {
+    .related-projects{
+        margin-top: 50px;
+        margin-bottom: 0;
+        .heading{
+            padding: 0 10px;
+            h2{
+                font-size: 1rem;
+            }
+            button{
+                padding: 5px;
+                font-size: 0.8rem;
+            }
+        }
+        .products{
+           display: flex;
+           align-items: center;
+           overflow-x: scroll;
+           padding: 0 10px;
+           &::-webkit-scrollbar{
+            display: none;
+           }
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+}

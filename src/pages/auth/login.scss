@@ -1,0 +1,202 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    .gif{
+       img{
+        height: 400px;
+        width: 400px;
+        padding-right: 50px;
+        cursor: pointer;
+       animation: slide-up 0.5s ease; 
+       }
+    }
+    .form{
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40px;
+            // border: 1px solid black;
+            border-radius: 10px;
+            padding: 50px 40px;
+            box-shadow: inset 0 0 10px rgb(166, 166, 166);
+            h1{
+                color: crimson;
+                font-size: 1.9rem;
+                font-weight: 800;
+            }
+            input{
+                width: 100%;
+                padding: 10px 20px;
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            button{
+                padding: 10px 20px;
+                width: 50%;
+                font-size: 1.2rem;
+                margin-top: 20px;
+                cursor: pointer;
+                color: white;
+                background-color: crimson;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                &:hover{
+                    background-color: red;
+                }
+            }
+            p{
+                margin-top: 40px;
+            }
+        }
+
+    }
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 150px;
+    padding-bottom: 250px;
+    .gif{
+       img{
+        height: 400px;
+        width: 400px;
+        padding-right: 50px;
+        cursor: pointer;
+       animation: slide-up 0.5s ease; 
+       }
+    }
+    .form{
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 40px;
+            border-radius: 10px;
+            padding: 50px 40px;
+            box-shadow: inset 0 0 10px rgb(166, 166, 166);
+            h1{
+                color: crimson;
+                font-size: 1.9rem;
+                font-weight: 800;
+            }
+            input{
+                width: 100%;
+                padding: 10px 20px;
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            button{
+                padding: 10px 20px;
+                width: 50%;
+                font-size: 1.2rem;
+                margin-top: 20px;
+                cursor: pointer;
+                color: white;
+                background-color: crimson;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                &:hover{
+                    background-color: red;
+                }
+            }
+            p{
+                margin-top: 40px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:780px) {
+    .login{
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        margin-top: -100px;
+        .gif{
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            background-color: transparent;
+            img{
+                height: 100px;
+                width: 100px;
+                margin: 0;
+                margin-bottom: -200px;
+                animation:slide-right 0.5s ease ;
+                background-color: transparent;
+            }
+        }
+        .form{
+            form{
+                width: 70vw;
+                margin: 0;
+                padding: 30px 20px;
+                input{
+                    width: 80%;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .register{
+        flex-direction: column;
+        position: relative;
+        margin: 0;
+        margin-top: 50px;
+        .gif{
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            background-color: transparent;
+            img{
+                height: 100px;
+                width: 100px;
+                margin: 0;
+                background-color: transparent;
+                margin-top: -70px;
+            }
+        }
+        .form{
+            form{
+                width: 70vw;
+                margin: 0;
+                padding: 30px 20px;
+                input{
+                    width: 80%;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slide-up {
+    0%{
+        transform:translateY(10rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    0%{
+        transform:translateX(100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

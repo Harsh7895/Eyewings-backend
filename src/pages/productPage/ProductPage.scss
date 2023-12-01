@@ -1,0 +1,510 @@
+.product-page {
+    padding-top: 80px;
+    min-height: 150vh;
+    width: 100vw;
+    .hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid black;
+        padding-right: 100px;
+        .left-side{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin-left: 10px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            .main-img{
+                height: 60vh;
+                width: 50vw;
+                border-bottom: 1px solid black;
+                padding-bottom: 10px;
+                // object-fit: cover;
+                padding-top: 50px;
+            }
+            .thumbnails{
+                display: flex;
+                justify-content: center;
+              
+                img{
+                    height: 50px;
+                    width: 50px;
+                    object-fit: cover;
+                    cursor: pointer;
+                    margin: 10px;
+                    border: 1px solid grey;
+                    padding: 2px;
+                    &:hover{
+                        border: 2px solid blue;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .btn{
+                display: flex;
+                justify-content: center;
+                padding-top: 30px;
+                button{
+                    padding: 20px 60px;
+                    outline: none;
+                    font-size: 21px;
+                    margin-left: 20px;
+                    background-color: transparent;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+                #cart{
+                background-color: orange;
+                }
+                #buy{
+                    background-color: orangered;
+                }
+            }
+        }
+        .right-side{
+            width: 100%;
+            padding-top: 20px;
+            min-height: 250vh;
+            margin-left: 50px;
+            overflow-y: scroll;
+            position: sticky;
+            top: 0;
+            right: 0;
+            padding-bottom: 20px;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            h1{
+                font-size: 40px;
+                font-weight: 400;
+                letter-spacing: -1px;
+                margin-bottom: 0;
+            }
+            p{
+                margin: 0;
+                .one{
+                    padding: 5px 10px;
+                    margin: 0 10px;
+                    color: white;
+                    background-color: green;
+                    font-size: 11px;
+                }
+                .two{
+                    margin: 0 10px;
+                    color: grey;
+                    font-size: 11px;
+                }
+                .three{
+                    font-family: cursive;
+                }
+            }
+            .prices{
+                display: flex;
+                align-items: center;
+                margin-top: 30px;
+                h1{
+                    margin: 0;padding: 0;
+                    font-size: 45px;
+                }
+                h2{
+                    color: grey;
+                    font-weight: 600;
+                    position: relative;
+                    margin: 0 20px;
+                    margin-right: 10px;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        bottom: 40%;
+                        height: 2px;
+                        width: 100%;
+                        background-color: black;
+                    }
+                }
+                span{
+                    color: green;
+                }
+            }
+            .colors{
+                display: flex;
+                align-items: center;
+                border: 1px solid grey;
+                padding: 0 10px;
+                h1{
+                    margin: 0;
+                    padding: 0;
+                    border-right: 1px solid grey;
+                    padding: 10px 0;
+                    padding-right: 5px;
+                    font-size: 21px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+                span{
+                    border: 1px solid black;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    margin-bottom: 7px;
+                    &:hover{
+                        border: 3px solid blue;
+                    }
+                 }
+                .no-item{
+                    border: none;
+                    height: auto;
+                    width: auto;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: gray;
+                    font-weight: 700;
+                    &:hover{
+                        border: none;
+                    }
+                }
+            }
+            .gender{
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .Description{
+                border: 1px solid grey;
+                margin-top: 40px;
+                h2{
+                    margin: 0;
+                    border-bottom: 1px solid grey;
+                    padding: 10px 20px; 
+                    letter-spacing: 1px;     
+                }
+                p{
+                    padding: 10px 20px;
+                    margin: 20px 0;
+                }
+            }
+            .specifications{
+                border: 1px solid grey;
+                margin-top: 40px;
+                h2{
+                    margin: 0;
+                    border-bottom: 1px solid grey;
+                    padding: 10px 20px; 
+                    letter-spacing: 1px;     
+                }
+                h4{
+                    padding-left: 50px;
+                }
+                section{
+                    display: flex;
+                    align-items: center;
+                    padding: 30px;
+                    padding-top: 0;
+                    .properties{
+                        p{
+                            text-transform: uppercase;
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+                    }
+                    .value{
+                        margin-left: 15vw;
+                        p{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            .rating-review{
+                border: 1px solid grey;
+                margin-top: 40px;
+                h2{
+                    margin: 0;
+                    border-bottom: 1px solid grey;
+                    padding: 10px 20px; 
+                    letter-spacing: 1px;     
+                }
+                .add-rating{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    .foo{
+                        margin: 10px 0;
+                    }
+                    #myTextarea{
+                        width: 98%;
+                        border-right: none;
+                        border-left: none;
+                        outline: none;
+                    }
+                    p{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        height: 100px;
+                        justify-content: flex-start;
+                        label{
+                            padding-left: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            cursor: pointer;
+                        }
+                       .reviewImages{
+                           position: relative;
+                           height: 50px;
+                           width: 50px;
+                           margin-left: 10px;
+                           display: flex;
+                        img{
+                            height: 50px;
+                            width: 50px;
+                        }
+                        svg{
+                            position: absolute;
+                            top: -7px;
+                            right: -7px;
+                            background-color: black;
+                            border-radius: 50%;
+                            color: white;
+                            font-size: 8px;
+                            font-weight: 100;
+                            padding: 5px;
+                            cursor: pointer;
+                        }
+                       }
+                      
+                    }
+                    button{
+                        padding: 3px 15px;
+                        font-size: 21px;
+                        margin-bottom: 20px;
+                        cursor: pointer;
+                        background-color: transparent;
+                        border-radius: 10px;
+                        outline: none;
+                        border: 1px solid grey;
+                        color: grey;
+                        position: absolute;
+                        bottom: 0;
+                        right: 30px;
+                        &:active{
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product-reviews{
+        width: 90vw;
+        margin: 0 auto;
+        section{
+            padding: 20px;
+            // display: grid;
+            // grid-template-columns: 1fr 1fr;
+            .right-section{
+                padding: 20px;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                .user-review{
+                    border: 1px solid grey;
+                    padding: 20px;
+                    padding-bottom: 0;
+                    border-radius: 5px;
+                    position: relative;
+                    margin-top: 20px;
+
+                    p{
+                        margin: 0;padding: 0;
+                    }
+                    #review{
+                       margin-top: 10px;
+                       font-size: 16px;
+                       font-weight: 600;
+                       margin-bottom: 10px;
+                    }
+                    p>span{
+                        color: white;
+                        background-color: green;
+                        padding: 2px 5px;
+                        font-size: 10px;
+                    }
+                    #reviewImages{
+                        border-bottom: 1px solid grey;
+                        padding-bottom: 5px;
+                    }
+                    p>img{
+                        height: 40px;
+                        width: 40px;
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                    .reviewDetails{
+                        padding: 0;
+                        padding-top: 15px;
+                        font-size: 12px;
+                        color: grey;
+                        letter-spacing: 1px;
+                    }
+                    .review-delete{
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        color: crimson;
+                        font-size: 21px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:780px) {
+    .product-page{
+        padding-top: 0;
+        min-height: 50vh;
+        .hero{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            .left-side{
+                position: relative;
+                width: 100vw;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                margin-left: 0;
+                .main-img{
+                    width: 90vw;
+                    height: 60vh;
+                    margin: 0;
+                    padding: 0 20px;
+                }
+                .btn{
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    button{
+                        font-size: 16px;
+                        padding: 10px;
+                    }
+                }
+            }
+            .right-side{
+                padding-top: 0;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                padding: 0 10px;
+                margin-top: -100px;
+                min-height: 100vh;
+                h1{
+                    margin-top: 0;
+                    padding-top: 0;
+                    font-size: 1.2rem;
+                    white-space: wrap;
+                }
+                p{
+                    padding-top: 5px;
+                    width: 90vw;
+                    .one{
+                        font-size: 10px;
+                    }
+                    .two{
+                        font-size: 10px;
+                    }
+                    .three{
+                        font-size: 0.4rem;
+                    }
+                }
+                .prices{
+                    width: 90vw;
+                    h1{
+                        font-size: 2rem;
+                        padding-top: 0;
+                        margin-top: 0;
+                    }
+                    h2{
+                        font: 1rem;
+                    }
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+                .colors{
+                    margin: 0;
+                    width: 90vw;
+                    overflow: hidden;
+                    h1{
+                        font-size: 1rem;
+                    }
+                    span{
+                        height: 15px;
+                        width: 15px;
+                    }
+                    .no-item{
+                        font-size: 1rem;
+                    }
+                }
+                .Description{
+                    overflow: hidden;
+                    width: 90vw;
+                    h2{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                .specifications{
+                    width: 90vw;
+                    h2{
+                        font-size: 1rem;
+                    }
+                    section{
+                        padding:10px;
+                        .properties{
+                            p{
+                                font-size: 0.6rem;
+                            }
+                        }
+                        .value{
+                            margin-left: -100px;
+                            p{
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
+
+                .rating-review{
+                    width: 90vw;
+                    h2{
+                        font-size: 1rem;
+                    }
+                    .add-rating{
+                        p{
+                            height: 50px;
+                            img{
+                                height: 30px;
+                                width: 30px;
+                            }
+                            label{
+                                font-size: 0.7rem;
+                            }
+                        }
+                        button{
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }

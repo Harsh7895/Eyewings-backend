@@ -1,0 +1,214 @@
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 70px;
+    width: 100%;
+    color: white;
+    background-color: black;
+    border-bottom: 1px solid white;
+    z-index: 101;
+    h2{
+        cursor: pointer;
+        color: red;
+        span{
+            color: white;
+        }
+        svg{
+            color: red;
+        }
+        
+    }
+    h3{
+        a{
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+        }
+    }
+    form{
+        input{
+            padding: 8px 120px 8px 10px;
+            font-size: 13px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+  nav{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    a{
+        text-decoration: none;
+        color: white;
+        margin-left: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg{
+        margin-right: 2px;
+        }
+       &:hover{
+        &::after{
+            content: "";
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50%;
+            color: red;
+            border-bottom: 1px solid red;
+    }
+       }
+       }
+  }
+}
+
+.active{
+    border-bottom: 1px solid red;
+}
+
+.header-mob1{
+       // position: sticky;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       height: 60px;
+       width: 100%;
+       color: black;
+       border-bottom: 2px solid white;
+       box-shadow: inset 3px 0 10px whitesmoke;
+       position: sticky;
+    .left{
+        display: flex;
+        align-items: center;
+        .logo{
+            color: red;
+            font-size: 2rem;
+            margin: 0 10px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: -1px;
+            color: rgb(38, 1, 38);
+        }
+
+    }
+    .right{
+        margin-left: 20px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        #profile-img{
+             height: 30px;
+               width: 30px;
+               border-radius: 50%;
+               img{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+               }
+        }
+        svg{
+            font-size: 1.5rem;
+            font-weight: 100;
+            color: rgb(38, 1, 38);
+        }
+    }
+
+}
+
+@media screen and (min-width:780px) {
+    .header-mob1{
+        display: none;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .header{
+        display: none;
+    }
+}
+
+.arrow{
+    color: white;
+    font-size: 11px;
+    margin-left: 2px;
+    animation: up-down 0.9s 0.2s ease-in-out  infinite;
+}
+.prof{
+    position: relative;
+    &:active, &:hover{
+        .prof-2{
+            display: inline;
+        }
+    }
+    .prof-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       img,svg{
+            color: white;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+    }
+    .prof-2{
+        position: absolute;
+        top: 20px;
+        background-color: black;
+        height: auto;
+        width: 150px;
+        white-space: nowrap;
+        text-align:left;
+        border-radius: 10px;
+        z-index: 100;
+        box-shadow: inset 4px 4px 10px rgba(248, 248, 251, 0.3);
+        display: none;
+        .logout{
+            color: crimson;
+        }
+        a{
+            padding: 10px 0;
+            margin-left: -10px;
+            &:active{
+                color: crimson;
+            }
+           
+            &:hover{
+                color: red;
+                &::after{
+                    width: 0;
+                }
+            }
+        }
+        // margin-top: 100px;
+    }
+}
+@keyframes up-down {
+    0%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-2px);
+    }
+}

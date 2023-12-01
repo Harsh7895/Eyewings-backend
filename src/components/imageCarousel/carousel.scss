@@ -1,0 +1,18 @@
+.caro{
+    height: 500px;
+    width: 100vw;
+    margin-bottom: 6px;
+    img{
+        height: 500px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .caro{
+        height: 200px;
+        img{
+            height: 200px;
+        }
+    }
+}

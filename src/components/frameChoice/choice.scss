@@ -1,0 +1,102 @@
+.container{
+    display: grid;
+    grid-template-columns: 2fr 7.5fr;
+    height: 300px;
+    .sec1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 120px;
+        h1{
+            font-size: 2.2rem;
+            color: rgb(48, 48, 48);
+            font-weight: 200;
+            letter-spacing: 1px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h2{
+            font-size: 3rem;
+            color: rgb(20, 20, 20);
+            font-weight: 700;
+            font-family: cursive;
+            margin-top: -30px;
+            margin-left: -30px;
+        }
+        p{
+            font-size: 15px;
+            font-weight: 300;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: -30px;
+            letter-spacing: -1px;
+            margin-left: -60px;
+        }
+    }
+    .sec2{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin-left: -230px;
+        .sec2-1{
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(8 , 2fr);
+            overflow-x: scroll;
+            &::-webkit-scrollbar{
+                width: 0;
+            }
+        }
+    }
+}
+
+.card{
+    height: 200px;
+    // width: 170px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    img{
+        // height: 90px;
+        width: 150px;
+        object-fit: contain;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        padding: 5px 14px;
+        background-color: crimson;
+        &:hover{
+            background-color: red;
+        }
+    }
+}
+
+@media screen and (max-width:780px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // overflow-x: hidden;
+        .sec1{
+            margin: 0;
+            h1{
+                margin: 0;
+            }
+            h2{
+                margin: 0;
+            }
+            p{
+                margin: 0;
+            }
+        }
+        .sec2{
+            margin: 0;
+            padding: 0 5vw;
+            width: 180vw;
+        }
+    }    
+}

@@ -1,0 +1,101 @@
+.dlist {
+    display: flex;
+    padding-top: 70px;
+    width: 300px;
+    min-height: 100vh;
+
+    .column-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        border: 1px solid black;
+        border-bottom: none;
+
+        .row1 {
+            color: white;
+            background-color: rgb(240, 216, 216);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            justify-content: center;
+
+            img {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 21px;
+                margin-top: -1px;
+                padding-bottom: 30px;
+            }
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow: hidden;
+            background-color: white;
+
+            a {
+                width: 100%;
+                padding: 10px 0;
+                font-size: 18px;
+                text-decoration: none;
+                color: rgb(59, 57, 57);
+                font-weight: 700;
+                box-shadow: inset 4px 4px 10px rgba(125, 125, 182, 0.3);
+                padding-left: 10px;
+                border-bottom: 1px solid red;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:780px) {
+    .dlist{
+        width: 100vw;
+        border: none;
+        min-height: 50px;
+        padding-top: 0;
+        .column-1{
+            border: none;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+        .column-1>.row1{
+            color: transparent;
+            background-color: transparent;
+            img{display: none;}
+            h1{
+                display: none;
+            }
+        }
+        .column-1>.links{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid black;
+            a{
+                font-size: 12px;
+                height: auto;
+                width: auto;
+                box-shadow: none;
+                border: none;
+                white-space: nowrap;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+}

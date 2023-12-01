@@ -1,0 +1,29 @@
+.wishlist{
+    padding-top: 100px;
+    min-height: 100vh;
+    // padding: 100px 150px;
+    width: 100vw;
+    box-shadow: inset 4px 5px 10px rgba(127, 126, 126 , 0.8);
+    .heading{
+        width: 80vw;
+        margin: 0 auto;
+      h1{
+        font-size: 40px;
+        font-weight: 400;
+        border-bottom: 1px solid grey;
+        margin-bottom: 0;
+      }
+    }
+    .wishlist-items{
+      height: 150vh;
+      width: 90%;
+      margin: 0 auto;
+     display: flex;
+    }
+}
+
+@media screen and (max-width:780px) {
+  .wishlist{
+    padding-top: 100px;
+  }
+}
