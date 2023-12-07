@@ -49,3 +49,5 @@ mongoose.connect(process.env.MONGO_URI, { dbName: "Eyewings" }).then(() => {
         console.log(`Server running on ${process.env.PORT}`)
     })
 }).catch((err) => console.log(err))
+
+module.exports = app
