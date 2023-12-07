@@ -16,7 +16,7 @@ const app = express()
 
 // Middleware
 app.use(cors({
-    origin: "http://localhost:3000" ,
+    origin: "https://eyewings-frontend.vercel.app" ,
     methods: 'GET , POST , PUT , PATCH , DELETE , HEAD',
     credentials: true
 }))
