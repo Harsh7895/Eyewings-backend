@@ -131,7 +131,7 @@ const getLoginStatus = asyncHandler(async (req, res) => {
     }
     const verified = jwt.verify(token, process.env.TOKEN_SECRET_KEY)
     if (!verified) {
-        return res.json(true)
+        return res.json(false)
     } else {
         return res.json(true)
     }
